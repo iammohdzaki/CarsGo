@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CarsGo</string>
+    <string name="sign_in_splash_text">Sign In</string>
+    <string name="sign_up_splash_text">Sign Up</string>
+    <string name="sign_in_with_facebook">Sign In with Facebook</string>
+    <string name="or_text">OR</string>
+    <string name="email_edit_text_hint">Email</string>
+    <string name="password_edit_text_hint">Password</string>
+    <string name="forgot_password_text">Forgot Password ?</string>
+    <string name="don_t_have_account_text">Don’t have an account? <b>Sign Up</b></string>
+    <string name="i_accept_the_terms"><u>I accept the Terms of Service and Privacy Policy</u></string>
+    <string name="first_name_edit_text">First Name</string>
+    <string name="last_name_edit_text">Last Name</string>
+    <string name="mobile_number_edit_text">Mobile Number</string>
+    <string name="home_address_edit_text">Home Address</string>
+    <string name="confirm_password_edit_text">Confirm Password</string>
+    <string name="sign_up_button">Sign Up</string>
+</resources>

@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "789843536407",
+    "firebase_url": "https://carsgo-1c9a3.firebaseio.com",
+    "project_id": "carsgo-1c9a3",
+    "storage_bucket": "carsgo-1c9a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789843536407:android:1cb911adb8fd8bd8",
+        "android_client_info": {
+          "package_name": "com.example.carsgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789843536407-ccujkm3ie7e0klkb3e0uugelpj60htis.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.carsgo",
+            "certificate_hash": "0945cbe394598e980c0759cb91e9e79a2ee16edf"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARaxDKnHVywnkkvnWKvLN0S0xSY94pW7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789843536407-fjgr314efhbu7nvsj28ulrvtgtl8qt6t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
