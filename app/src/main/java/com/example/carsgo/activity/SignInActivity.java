@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -16,9 +17,11 @@ import com.example.carsgo.R;
 import com.example.carsgo.util.CustomTextWatcher;
 import com.example.carsgo.util.Validator;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.ProviderQueryResult;
 
 public class SignInActivity extends AppCompatActivity {
 
@@ -47,14 +50,14 @@ public class SignInActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signInUser();
+                authenticateUser();
             }
         });
     }
 
-    private void signInUser(){
-        String email=etEmail.getText().toString();
-        String password=etPassword.getText().toString();
+    private void authenticateUser(){
+        final String email=etEmail.getText().toString();
+        final String password=etPassword.getText().toString();
 
         if(!Validator.isValidEmail(email)){
             etEmail.setError("Email is not Valid");
@@ -68,9 +71,11 @@ public class SignInActivity extends AppCompatActivity {
             return;
         }
 
-
-
         dialog = ProgressDialog.show(this,"Signing You In","Fetching Details from Server", true);
+        signInUser(email,password);
+    }
+
+    private void signInUser(String email,String password){
         mAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -84,8 +89,15 @@ public class SignInActivity extends AppCompatActivity {
                             Toast.makeText(SignInActivity.this,"Wrong Email or Password!"+task.getResult(),Toast.LENGTH_SHORT).show();
                         }
                     }
+                })
+                .addOnFailureListener(this, new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
                 });
     }
+
 
     public void goBack(View view){
         finish();

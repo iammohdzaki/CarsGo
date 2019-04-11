@@ -15,4 +15,9 @@
     <string name="home_address_edit_text">Home Address</string>
     <string name="confirm_password_edit_text">Confirm Password</string>
     <string name="sign_up_button">Sign Up</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
